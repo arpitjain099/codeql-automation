@@ -6,7 +6,7 @@ import yaml
 import time
 
 GITHUB_TOKEN = os.environ['GH_API_TOKEN']
-GITHUB_USERNAME = "arpitjain799"
+GITHUB_USERNAME = "arpitjain099"
 
 command = ['rm', '-rf', "clonerepo/test/"]
 subprocess.run(command, check=True)
