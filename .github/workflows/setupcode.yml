@@ -8,7 +8,7 @@ on:
   #  branches: [master]
   
 jobs:
-  your-job:
+  setup-codeql:
     runs-on: ubuntu-latest
     timeout-minutes: 12000
     steps:
