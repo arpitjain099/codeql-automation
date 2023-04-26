@@ -5,7 +5,7 @@ import subprocess
 import yaml
 import time
 
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = ""
 GITHUB_USERNAME = "arpitjain799"
 
 command = ['rm', '-rf', "clonerepo/test/"]
