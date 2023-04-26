@@ -5,7 +5,7 @@ import subprocess
 import yaml
 import time
 
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_USERNAME = "arpitjain799"
 
 command = ['rm', '-rf', "clonerepo/test/"]
@@ -40,7 +40,7 @@ for gh_url in unique_gh:
 	g = Github(GITHUB_TOKEN)
 	# Fork the repository to your account
 	print("aaa")
-	repo = g.get_repo(gh_url)
+	repo = g.get_repo(f"{REPO_OWNER}/{REPO_NAME}")
 	g.get_user().create_fork(repo)
 	time.sleep(5)
 	default_branch = repo.default_branch
