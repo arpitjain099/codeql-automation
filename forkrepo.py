@@ -155,7 +155,11 @@ for gh_url in unique_gh:
 		yaml.dump(a, f)
 	os.system("git add .")
 	os.system("git commit -m 'Added CodeQL code'")
-	subprocess.call(["git", "push", "origin", branch.name])
+	github_token = os.environ["GITHUB_TOKEN"] 
+	print(github_token)
+	subprocess.run(["git", "remote", "-v"])
+
+	subprocess.run(["git", "push", "origin", branch.name])
 	print("Changes pushed to " + branch.name)
 
 	os.chdir("../../")
