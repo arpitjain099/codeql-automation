@@ -5,8 +5,8 @@ import subprocess
 import yaml
 import time
 
-GITHUB_TOKEN = os.environ['GH_API_TOKEN']
-GITHUB_USERNAME = "arpitjain099"
+GITHUB_TOKEN = "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"
+GITHUB_USERNAME = "arpitjain799"
 
 command = ['rm', '-rf', "clonerepo/test/"]
 subprocess.run(command, check=True)
@@ -37,7 +37,7 @@ for gh_url in unique_gh:
 	REPO_NAME = gh_url.split("/")[-1]
 
 	# Authenticate with your GitHub account
-	g = Github("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")
+	g = Github(GITHUB_TOKEN)
 	# Fork the repository to your account
 	repo = g.get_repo(f"{REPO_OWNER}/{REPO_NAME}")
 	g.get_user().create_fork(repo)

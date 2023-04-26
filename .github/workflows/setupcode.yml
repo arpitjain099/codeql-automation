@@ -27,7 +27,7 @@ jobs:
       
       - name: Set up Git
         run: |
-          git config --global user.email "arpitjain099@gmail.com"
+          git config --global user.email "arpitjain799@gmail.com"
           git config --global user.name "Arpit Jain"
 
       - name: Run Python script with secret
