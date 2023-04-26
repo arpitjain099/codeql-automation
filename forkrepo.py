@@ -5,7 +5,7 @@ import subprocess
 import yaml
 import time
 
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = "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"
 GITHUB_USERNAME = "arpitjain799"
 
 command = ['rm', '-rf', "clonerepo/test/"]
@@ -39,7 +39,6 @@ for gh_url in unique_gh:
 	# Authenticate with your GitHub account
 	g = Github(GITHUB_TOKEN)
 	# Fork the repository to your account
-	print("aaa")
 	repo = g.get_repo(f"{REPO_OWNER}/{REPO_NAME}")
 	g.get_user().create_fork(repo)
 	time.sleep(5)
@@ -156,11 +155,7 @@ for gh_url in unique_gh:
 		yaml.dump(a, f)
 	os.system("git add .")
 	os.system("git commit -m 'Added CodeQL code'")
-	
-	print(GITHUB_TOKEN)
-	subprocess.run(["git", "remote", "-v"])
-
-	subprocess.run(["git", "push", "origin", branch.name])
+	subprocess.call(["git", "push", "origin", branch.name])
 	print("Changes pushed to " + branch.name)
 
 	os.chdir("../../")
