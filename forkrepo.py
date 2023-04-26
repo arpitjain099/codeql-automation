@@ -37,7 +37,7 @@ for gh_url in unique_gh:
 	REPO_NAME = gh_url.split("/")[-1]
 
 	# Authenticate with your GitHub account
-	g = Github("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")
+	g = Github("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")
 	# Fork the repository to your account
 	repo = g.get_repo(f"{REPO_OWNER}/{REPO_NAME}")
 	g.get_user().create_fork(repo)
