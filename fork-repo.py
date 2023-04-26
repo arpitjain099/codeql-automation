@@ -4,7 +4,8 @@ import csv
 import subprocess
 import yaml
 import time
-GITHUB_TOKEN = ""
+
+GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
 GITHUB_USERNAME = "arpitjain799"
 
 command = ['rm', '-rf', "clonerepo/test/"]
