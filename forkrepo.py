@@ -117,12 +117,7 @@ for gh_url in unique_gh:
 			"security-events": "write"
 		},
 		"strategy": {
-			"fail-fast": False,
-			"matrix": {
-			"language": [
-				"python"
-			]
-			}
+			"fail-fast": False
 		},
 		"steps": [
 			{
@@ -133,7 +128,7 @@ for gh_url in unique_gh:
 			"name": "Initialize CodeQL",
 			"uses": "github/codeql-action/init@v2",
 			"with": {
-				"languages": "${{ matrix.language }}",
+				"languages": "python",
 				"queries": "security-and-quality"
 			}
 			},
